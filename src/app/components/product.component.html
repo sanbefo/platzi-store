@@ -1,6 +1,6 @@
-<!-- <div> -->
-    <h3>{{ product.title }}</h3>
-    <img [src]="product.image" [alt]="product.description">
-    <strong>{{ product.price }}</strong>
-    <button (click)="addCart()">Add to cart</button>
-<!-- </div> -->
+<h3 appHighlight>{{ product.title | uppercase }}</h3>
+<img [src]="product.image" [alt]="product.description">
+<strong>{{ product.price | currency }}</strong>
+<p>{{ product.description | slice:0:5 }}</p>
+<p>{{ today | date }}</p>
+<button (click)="addCart()">Add to cart</button>
