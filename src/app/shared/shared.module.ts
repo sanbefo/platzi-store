@@ -6,7 +6,6 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-
 @NgModule({
   declarations: [
     ExponentialPipe,
@@ -25,4 +24,5 @@ import { FooterComponent } from './components/footer/footer.component';
     RouterModule
   ]
 })
+
 export class SharedModule { }

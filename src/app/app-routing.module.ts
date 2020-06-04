@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { ProductsComponent } from './products/components/products.component';
-import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
 import { PageNotFoundComponent } from './page-not-found/components/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/components/product-detail.component';
@@ -27,7 +26,9 @@ const routes: Routes = [
       {
         path: 'contact',
         canActivate: [AdminGuard],
-        component: ContactComponent
+        loadChildren: () => import('./contact/contact.module').then(
+          module => module.ContactModule
+        ),
       },
       {
         path: 'products',
