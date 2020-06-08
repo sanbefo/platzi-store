@@ -1,13 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+}
+
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 50px 20px;
+    grid-gap: 20px;
 }
 
 .container {
@@ -16,6 +20,10 @@ body {
     padding-left: 0px;
     padding-right: 0px;
     width: 100%;
+}
+
+.mat-toolbar {
+    background-color: #a9dc4a !important;
 }
 
 @media (min-width: 576px) {
@@ -29,6 +37,3 @@ body {
         padding-right: 16px;
     }
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
