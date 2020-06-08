@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../product.model';
+import { Product } from './../../../core/models/product.model';
 
 @Component({
   selector: 'app-products',
@@ -57,7 +57,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  productClicked(id: number) {
+  clickedProduct(id: number) {
     console.log('id: ' + id);
   }
 }

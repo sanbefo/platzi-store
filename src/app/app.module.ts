@@ -3,25 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/components/product.component';
 import { CartComponent } from './cart/cart.component';
-import { ProductsComponent } from './products/components/products.component';
 import { DemoComponent } from './demo/demo.component';
-import { PageNotFoundComponent } from './page-not-found/components/page-not-found.component';
-import { ProductDetailComponent } from './product-detail/components/product-detail.component';
-import { LayoutComponent } from './layout/components/layout.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LayoutComponent } from './layout/layout.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
     CartComponent,
-    ProductsComponent,
     DemoComponent,
     PageNotFoundComponent,
-    ProductDetailComponent,
     LayoutComponent
   ],
   imports: [
@@ -29,7 +24,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     FormsModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
