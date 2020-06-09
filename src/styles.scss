@@ -26,6 +26,14 @@ body {
     background-color: #253e4e !important;
 }
 
+mat-card-content {
+    padding: 10px;
+}
+
+mat-card-actions {
+    padding: 10px !important;
+}
+
 @media (min-width: 576px) {
     .product-grid {
         display: grid;
