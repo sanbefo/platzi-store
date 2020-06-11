@@ -1,10 +1,15 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-       <div class="row between-xs middle-xs header-row">
-           <nav>
-               <a mat-button routerLink="/about-us" routerLinkActive="active">About Us</a>
-               <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
-           </nav>
-       </div>
-   </mat-toolbar-row>
+        <div class="row between-xs middle-xs header-row">
+            <nav>
+                <a mat-button routerLink="/about-us" routerLinkActive="active">About Us</a>
+                <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+                <mat-form-field>
+                    <input matInput placeholder="email" [formControl]="emailField" type="email">
+                </mat-form-field>
+                <button [disabled]="emailField.invalid" (click)="sendMail()">Subscribe</button>
+                <p *ngIf="emailField.invalid">The field is invalid</p>
+            </nav>
+        </div>
+    </mat-toolbar-row>
 </mat-toolbar>
