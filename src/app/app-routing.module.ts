@@ -28,6 +28,13 @@ const routes: Routes = [
         ),
       },
       {
+        path: 'order',
+        canActivate: [AdminGuard],
+        loadChildren: () => import('./order/order.module').then(
+          module => module.OrderModule
+        ),
+      },
+      {
         path: 'products',
         canActivate: [AdminGuard],
         loadChildren: () => import('./product/product.module').then(
